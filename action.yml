@@ -1,12 +1,6 @@
 name: 'reset --hard to commit'
 description: 'Github Action to reset a given branch to a given commit'
 inputs:
-    github-username:
-        description: 'Github Username'
-        required: true
-    github-email:
-        description: 'Github Email address'
-        required: true
     github-token:
         description: 'Github Actions Token or Personal Access Token (PAT)'
         required: true
