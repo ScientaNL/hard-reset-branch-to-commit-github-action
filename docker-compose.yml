@@ -1,0 +1,18 @@
+version: "3.8"
+services:
+    node:
+        container_name: hard-reset-branch-to-commit-github-action
+        build:
+            context: .
+            dockerfile: Dockerfile
+        environment:
+            GITHUB_USERNAME: "${GITHUB_USERNAME}"
+            GITHUB_EMAIL: "${GITHUB_EMAIL}"
+            GITHUB_TOKEN: "${GITHUB_TOKEN}"
+            REPOSITORY_OWNER: "${REPOSITORY_OWNER}"
+            REPOSITORY_NAME: "${REPOSITORY_NAME}"
+            BRANCH_NAME: "${BRANCH_NAME}"
+            COMMIT_SHA: "${COMMIT_SHA}"
+        working_dir: /input
+        volumes:
+        -  ../ga-test-test:/input
