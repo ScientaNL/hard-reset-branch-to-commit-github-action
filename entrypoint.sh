@@ -6,4 +6,4 @@ git fetch origin
 git checkout -f -B $BRANCH_NAME origin/$BRANCH_NAME
 
 git reset --hard $COMMIT_SHA
-git push origin $BRANCH_NAME
+git push --force origin $BRANCH_NAME
