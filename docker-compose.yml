@@ -12,7 +12,7 @@ services:
             REPOSITORY_OWNER: "${REPOSITORY_OWNER}"
             REPOSITORY_NAME: "${REPOSITORY_NAME}"
             BRANCH_NAME: "${BRANCH_NAME}"
-            COMMIT_SHA: "${COMMIT_SHA}"
+            COMMIT: "${COMMIT}"
         working_dir: /input
         volumes:
         -  ../ga-test-test:/input

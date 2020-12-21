@@ -14,8 +14,8 @@ inputs:
         description: 'The branch to reset on'
         required: true
         default: ''
-    commit-sha:
-        description: 'Commit SHA to reset to'
+    commit:
+        description: 'Commit SHA or tag name to reset to'
         required: true
 runs:
     using: 'docker'
@@ -25,4 +25,4 @@ runs:
         REPOSITORY_OWNER: "${{inputs.repository-owner}}"
         REPOSITORY_NAME: "${{inputs.repository-name}}"
         BRANCH_NAME: "${{inputs.branch-name}}"
-        COMMIT_SHA: "${{inputs.commit-sha}}"
+        COMMIT: "${{inputs.commit}}"
